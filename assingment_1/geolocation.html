@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Location</title>
+
+	<style>
+		body {
+			text-align: center;
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1> Current Location</h1>
+	<p id="location"></p>
+	<button onclick="getCurrentLocations()"> Click Me</button>
+
+
+	<div class="audio">
+		<audio controls>
+			<source src="#">
+
+		</audio>
+	</div>
+	<div class="video">
+		<video controls></video>
+		<source src="#">
+	</div>
+
+
+
+
+
+
+
+	<script>
+		const loc = document.getElementById("location");
+		function getCurrentLocations() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(getPosition);
+			}
+			else {
+				loc.innerHTML = "Geolocation Not Supported";
+			}
+		}
+		function getPosition(position){
+			loc.innerHTML="latitude: "+position.coords.latitude+" <br> Longitude:"+ position.coords.longitude;
+		}	
+	</script>
+
+</body>
+
+</html>

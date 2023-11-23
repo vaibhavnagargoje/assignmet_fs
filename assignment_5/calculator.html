@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <label for="num1">Enter Number 1:</label>
+    <input type="number" id="num1" placeholder="Enter number 1">
+    <br>
+    <label for="num2">Enter Number 2:</label>
+    <input type="number" id="num2" placeholder="Enter number 2">
+    <br>
+    <button id="add-button">Add</button>
+    <button id="subtract-button">Subtract</button>
+    <button id="multiply-button">Multiply</button>
+    <button id="divide-button">Divide</button>
+    <p>Result: <span id="result">0</span></p>
+
+    <script>
+        // Get references to the input fields, buttons, and result element
+        const num1Input = document.getElementById("num1");
+        const num2Input = document.getElementById("num2");
+        const addButton = document.getElementById("add-button");
+        const subtractButton = document.getElementById("subtract-button");
+        const multiplyButton = document.getElementById("multiply-button");
+        const divideButton = document.getElementById("divide-button");
+        const resultElement = document.getElementById("result");
+
+        // Function to perform arithmetic operation
+        function performOperation(operation) {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "Invalid input";
+            } else {
+                switch (operation) {
+                    case "add":
+                        result = num1 + num2;
+                        break;
+                    case "subtract":
+                        result = num1 - num2;
+                        break;
+                    case "multiply":
+                        result = num1 * num2;
+                        break;
+                    case "divide":
+                        if (num2 === 0) {
+                            result = "Division by zero";
+                        } else {
+                            result = num1 / num2;
+                        }
+                        break;
+                    default:
+                        result = "Invalid operation";
+                }
+            }
+
+            resultElement.textContent = result;
+        }
+
+        // Add event listeners for each button
+        addButton.addEventListener("click", function() {
+            performOperation("add");
+        });
+
+        subtractButton.addEventListener("click", function() {
+            performOperation("subtract");
+        });
+
+        multiplyButton.addEventListener("click", function() {
+            performOperation("multiply");
+        });
+
+        divideButton.addEventListener("click", function() {
+            performOperation("divide");
+        });
+    </script>
+</body>
+</html>
+

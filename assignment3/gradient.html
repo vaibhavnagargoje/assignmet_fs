@@ -1,0 +1,51 @@
+<doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title> gradient </title>
+
+            <style>
+                *{
+                    /* background-color: aqua; */
+                    margin: 0;
+                    padding: 0;
+                }
+                .container{
+                    /* padding: 20px; */
+                    
+                    width: 100px;
+                    height: 100px;
+                    /* border:3px dashed black; */
+                }
+                .linear{
+                    width: 100px;
+                   
+                    height: 100%;
+                    /* padding: 20px 20px; */
+                }
+                .radial{
+                    width: 100px;
+                    height: 100px;
+                    /* padding: 20px 20px; */
+                }
+                .Linear:hover{
+                    background: linear-gradient(yellow, blue,pink);
+                }
+                .radial:hover{
+                    background: radial-gradient(circle,yellow, blue, pink);
+                }
+            </style>
+
+        </head>
+        <body>
+
+            <div class="container">
+                <div class="Linear">
+                    <button id="btn1"> Liner gradiant </button>
+                </div>
+                <div class="radial">
+                    <button id="btn2"> radial gradiant</button>
+                </div>
+            </div>
+        </body>
+    </html>

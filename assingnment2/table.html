@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Table Data</title>
+
+<style>
+
+	.container{
+
+	width:300px;
+	height:100px;
+	border: 2px dashed gray;
+	margin: auto;
+	padding-top: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+<table border="2px" align="center" cellpadding="10" cellspacing="1">
+<caption style="font-size:30px;" > Products </caption>
+	<tr>
+		<th >Name</th>
+		<th >Price</th>
+		<th >Details</th>
+
+	</tr>
+
+	<tr>
+		<td > Pencil </td>
+		<td > Rs.10 </td>
+		<td > <button  onclick="display('pencil')"> Know More </button> </td>
+	</tr>
+	
+	<tr>
+		<td > Pen </td>
+		<td > Rs.50 </td>
+		<td > <button onclick="display('pen')"> Know More </button> </td>
+	</tr>
+
+	<tr> 
+		<td > Books </td>
+		<td > Rs.400</td>
+		<td > <button onclick="display('books')" > Know More </button </td>
+	</tr>
+	
+	<tr>
+		<td > Calculator </td>
+		<td > Rs.1000 </td>
+		<td > <button onclick="display('calculator')" > Know More </button> </td>
+
+	</tr>
+</table
+
+	
+<div   >
+	<h4 style="margin: auto; width:10%; text-align:center;" > Details of the Products  </h4>
+</div>
+
+<div class ="container">
+	<p id="val" style="text-align:center; height:50px;"></p>
+</div>
+
+
+
+<script>
+
+	function display(item){
+		
+		if(item=="pencil"){
+		console.log("pencil");
+		text="pack of 10, colour:gray";
+		}	
+		
+		if (item=="pen"){
+			console.log("pen");
+			text="pack of 5 pens";
+		
+	
+				}
+		if(item=="books"){
+			console.log("books");
+			text="1 Book of CS";
+		}
+		if(item=="calculator"){
+			console.log("calculator");
+			text=" 2 Calculator";
+		}
+	document.getElementById("val").textContent=text;
+}
+</script>
+
+</body>
+
+
+
+</html>

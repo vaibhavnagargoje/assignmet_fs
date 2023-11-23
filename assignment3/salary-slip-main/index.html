@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal Info</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <main>
+          <div class="input-container">
+    <form>
+        <table>
+          <thead>
+            <tr>
+              <thead>
+                <th id="title" colspan="4">
+                    Enter Employee Details for Salary Silp
+
+                </th>
+              </thead>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td >Employee Name :</td>
+              <td><input id="empname" type="text" placeholder="Enter Name" /></td>
+            </tr>
+            <tr>
+              <td>Address :</td>
+              <td><input id="address" type="text" placeholder="Employee address" /></td>
+            </tr>
+
+            <tr>
+              <td> Total Working Days : </td>:</td>
+              <td><input id="workingDays" type="text" placeholder="Employee Designation" /></td>
+            </tr>
+            <tr>
+              <td>Total Leaves:</td>
+              <td><input id="leaves" type="text" placeholder="Employee Designation" /></td>
+            </tr>
+            <tr>
+              <td>Designation :</td>
+              <td><input id="Designation" type="text" placeholder="Employee Designation" /></td>
+            </tr>
+
+            <tr>
+              <td>Date :</td>
+              <td><input id="date" type="datetime-local" /></td>
+            </tr>
+
+            <tr>
+              <td>Salary :</td>
+              <td><input id='salary' type="text" placeholder="Enter Salary Amount " /></td>
+            </tr>
+
+           
+          </tbody>
+        </table>
+        <button>Submit</button>
+
+        </form>
+      </div>
+      
+<hr>
+<hr>
+    <div class="output-container">
+        <table border="6">
+            <thead>
+                <tr >
+                   <th colspan="4"> ABC Limited </th>
+                </tr>
+                <tr>
+                   <th colspan="4"> Deccen, Pune </th>
+                </tr>
+                
+                <tr>
+                    <th colspan="4"> Salary Slip </th>
+                </tr>
+
+            </thead>
+            <tbody >
+
+                
+                <tr>
+                    <td>Name </td>
+                    <td id="E_name"><span>...</span></td>
+                    <td> Month day </td>
+                    <td id="E_mday"><span> ... </span></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td id="E_address"><span> ......</span></td>
+                    <td> Leave Day  </td>
+                    <td id="E_leave"><span> ... </span></td>
+                </tr>
+                <tr>
+                    <td>Designation : </td>
+                    <td id="E_designation"><span>...</span></td>
+                    <td> Present Day </td>
+                    <td id="E_present"><span> ...</span></td>
+                </tr>
+                <tr>
+                    <td>Date </td>
+                    <td id="E_date"><span>...</span></td>
+                    
+                </tr>
+                
+                <tr>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Earning</th>
+
+                            <th colspan="2"> Deductin</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td> Basic Salary </td>
+                                <td id="B_salary">----</td>
+                                <td> PF(10%) </td>
+                                <td id="pf">-----</td>
+                            </tr>
+                            <tr>
+                                <td> DA (10%)</td>
+                                <td id="DA">-----</td>
+                                <td> TAX(5%)</td>
+                                <td id="tax">----</td>
+                            </tr>
+                            <tr>
+                                <td> HRA(12%) </td>
+                                <td id="HRA">----</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <thead>
+                                <tr>
+                                    <th >Gross Salary : </td>
+                                    <th id="Gross">...</d>
+                                    <th >Total Deduction </td>
+                                    <th id="Total_D">...</d>
+                                </tr>
+                            </thead>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Net Salary :
+                            </td>
+                            <td id="Net_S" colspan="1">
+                                ...
+                            </td>
+                        </tr>
+
+                    </thead>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                </tr>
+            
+            
+            </tbody>
+            
+
+        </table>
+
+
+
+
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

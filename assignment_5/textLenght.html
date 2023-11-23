@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length Calculator</title>
+</head>
+<body>
+    <h1>Text Length Calculator</h1>
+    <textarea id="text-area" rows="4" cols="50" placeholder="Enter text here"></textarea>
+    <button id="calculate-button">Calculate Length</button>
+    <p>Text Length: <span id="text-length">0</span></p>
+
+    <script>
+        // Get references to the textarea, button, and text length element
+        const textArea = document.getElementById("text-area");
+        const calculateButton = document.getElementById("calculate-button");
+        const textLength = document.getElementById("text-length");
+
+        // Add an event listener to the button
+        calculateButton.addEventListener("click", function() {
+            const enteredText = textArea.value;
+            const length = enteredText.length;
+            textLength.textContent = length;
+        });
+    </script>
+</body>
+</html>

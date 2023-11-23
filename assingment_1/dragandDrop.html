@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> drag and drop
+
+    </title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #rectangle {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+
+        #image {
+            max-width: 200px;
+            max-height: 150px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Drag and Drop</h1>
+    <div id="rectangle">
+        Drop Image here
+
+
+    </div>
+    <img id="image" src="photo.png" draggable="true">
+
+
+    <script>
+        const image = document.getElementById("image");
+        const rectangle = document.getElementById("rectangle");
+        console.log(typeof rectangle);
+        image.addEventListener("dragstart", (event) => {
+            event.dataTransfer.setData("text/plain", event.target.id);
+        });
+        rectangle.addEventListener("dragover", (event) => {
+            event.preventDefault();
+        });
+
+        rectangle.addEventListener("drop", (event) => {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text/plain");
+            const draggedImage = document.getElementById(data);
+            rectangle.innerHTML = "";
+            rectangle.appendChild(draggedImage);
+        });
+
+
+    </script>
+</body>
+
+</html>
