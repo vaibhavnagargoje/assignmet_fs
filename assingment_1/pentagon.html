@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Element Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #rectangle {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #000;
+            margin: 20px auto;
+        }
+        #canvas {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #000;
+            margin: 20px auto;
+        }
+        #star {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+        audio, video {
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi-Element Web Page</h1>
+    
+    <!-- Rectangle for Drag and Drop -->
+    <div id="rectangle">
+        Drop the image here
+    </div>
+    
+    <!-- Canvas with an Image -->
+    <canvas id="canvas" width="300" height="200"></canvas>
+    
+    <!-- SVG Element with a Star (Pentagon) -->
+    <svg id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <polygon points="50,10 30,90 90,40 10,40 70,90" fill="#ffcc00" />
+    </svg>
+    
+    <!-- Audio Element -->
+    <audio controls>
+        <source src="your_audio_file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Video Element -->
+    <video controls>
+        <source src="your_video_file.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+    
+    <script>
+        // Add your JavaScript code for interaction, canvas drawing, etc. here
+    </script>
+</body>
+</html>
