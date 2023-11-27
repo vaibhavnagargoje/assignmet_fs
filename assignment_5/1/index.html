@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length Counter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Basic styling for demonstration */
+        #textArea {
+            width: 300px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        #progressBar {
+            width: 300px;
+            height: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        #filler {
+            height: 100%;
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textArea"></textarea>
+    <div id="progressBar">
+        <div id="filler"></div>
+    </div>
+    <p>Text Length: <span id="textLength">0</span></p>
+    <button id="countButton">Count Length</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
